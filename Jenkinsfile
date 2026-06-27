@@ -6,7 +6,8 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/toolsknowledge/demo-appln.git'
+                git branch: 'main',
+                url: 'https://github.com/toolsknowledge/demo-appln.git'
             }
         }
 
