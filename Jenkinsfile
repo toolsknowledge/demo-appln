@@ -1,18 +1,15 @@
 pipeline {
-
     agent any
 
+    tools {
+        nodejs 'Node22'
+    }
+
     stages {
-
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                url: 'https://github.com/toolsknowledge/demo-appln.git'
-            }
-        }
-
         stage('Install') {
             steps {
+                sh 'node -v'
+                sh 'npm -v'
                 sh 'npm install'
             }
         }
