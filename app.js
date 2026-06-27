@@ -9,6 +9,10 @@ app.get("/", (req, res) => {
     res.send("CI/CD Pipeline Working Successfully");
 });
 
+app.get("/wish",(req,res)=>{
+    res.json({"msg":"hook working successfully !!!"});
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on ${PORT}`);
 });
